@@ -37,6 +37,15 @@ const PROJECTS = [
     liveUrl: '#',
     codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
   },
+  {
+    name: 'BudgetBridge',
+    image: './projects/project-5.png',
+    description:
+      'A personal finance app with a focus on visualization through charts and graphs. Hosted on Google Cloud and GitHub pages.',
+    tags: ['JavaScript', 'HTML/CSS'],
+    liveUrl: '#',
+    codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
+  },
 ]
 
 function Projects() {

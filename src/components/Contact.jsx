@@ -73,15 +73,15 @@ function Contact() {
             Send a message using the form, or reach out directly by email or social profiles below.
           </p>
           <ul className="contact-list">
-            <li><a href="mailto:[email protected]">[email protected]</a></li>
+            <li><a href="mailto:jacobbiddinger@gmail.com">jacobbiddinger@gmail.com</a></li>
             <li>
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                github.com/yourusername
+              <a href="https://github.com/jsb58p" target="_blank" rel="noopener noreferrer">
+                github.com/jsb58p
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/yourusername
+              <a href="https://www.linkedin.com/in/jacob-biddinger-718112190/" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/jacob-biddinger-718112190/
               </a>
             </li>
           </ul>
