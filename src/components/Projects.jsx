@@ -6,7 +6,7 @@ const PROJECTS = [
     image: './projects/project-1.png',
     description:
       'AI calendar app that takes a simple prompt and constraints, and turns it into a day-by-day outline. Syncs with Google Calendar.',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
+    tags: ['TypeScript', 'React', 'Node.js'],
     liveUrl: 'https://schedulerai-frontend-eta.vercel.app/',
     codeUrl: 'https://github.com/jsb58p/ai-calendar',
   },
@@ -15,7 +15,7 @@ const PROJECTS = [
     image: './projects/project-2.png',
     description:
       'Blockchain supply chain monitoring. Takes temperature/humidity data, records breaches on the blockchain, and makes all data accessible by pinning to an IPFS.',
-    tags: ['TypeScript', 'Express', 'Docker'],
+    tags: ['Solidity', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Ethereum', 'Blockchain'],
     liveUrl: '#',
     codeUrl: 'https://github.com/jsb58p/Blockchain--Supply-Chain-Temperature-Humidity',
   },
@@ -24,7 +24,7 @@ const PROJECTS = [
     image: './projects/project-3.png',
     description:
       'A database for tracking car repair orders in an auto shop.',
-    tags: ['Python', 'Flask', 'SQLite'],
+    tags: ['PostGRE SQL', 'pgAdmin4'],
     liveUrl: '#',
     codeUrl: 'https://github.com/jsb58p/Automative-Repair-Database',
   },
@@ -33,7 +33,7 @@ const PROJECTS = [
     image: './projects/project-4.png',
     description:
       'Created a fitness function for a genetic algorithm. The purpose is to use AI to find the best fit for class schedules given a set of constraints (instructor availability, class size, etc.)',
-    tags: ['JavaScript', 'HTML/CSS'],
+    tags: ['Python', 'Pygame'],
     liveUrl: '#',
     codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
   },
@@ -42,7 +42,7 @@ const PROJECTS = [
     image: './projects/project-5.png',
     description:
       'A personal finance app with a focus on visualization through charts and graphs. Hosted on Google Cloud and GitHub pages.',
-    tags: ['JavaScript', 'HTML/CSS'],
+    tags: ['Java', 'JavaScript', 'TypeScript', 'mySQL', 'Google Cloud Services'],
     liveUrl: '#',
     codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
   },
