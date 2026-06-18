@@ -3,6 +3,7 @@ import useReveal from '../hooks/useReveal.js'
 const PROJECTS = [
   {
     name: 'SchedulerAI',
+    image: './projects/project-1.png',
     description:
       'AI calendar app that takes a simple prompt and constraints, and turns it into a day-by-day outline. Syncs with Google Calendar.',
     tags: ['React', 'Node.js', 'PostgreSQL'],
@@ -11,6 +12,7 @@ const PROJECTS = [
   },
   {
     name: 'Cold Chain Monitoring',
+    image: './projects/project-2.png',
     description:
       'Blockchain supply chain monitoring. Takes temperature/humidity data, records breaches on the blockchain, and makes all data accessible by pinning to an IPFS.',
     tags: ['TypeScript', 'Express', 'Docker'],
@@ -19,6 +21,7 @@ const PROJECTS = [
   },
   {
     name: 'Automotive Repair Database',
+    image: './projects/project-3.png',
     description:
       'A database for tracking car repair orders in an auto shop.',
     tags: ['Python', 'Flask', 'SQLite'],
@@ -27,6 +30,7 @@ const PROJECTS = [
   },
   {
     name: 'Genetic Algorithms',
+    image: './projects/project-4.png',
     description:
       'Created a fitness function for a genetic algorithm. The purpose is to use AI to find the best fit for class schedules given a set of constraints (instructor availability, class size, etc.)',
     tags: ['JavaScript', 'HTML/CSS'],

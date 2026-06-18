@@ -56,8 +56,10 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 40%;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
