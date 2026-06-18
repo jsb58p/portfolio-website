@@ -13,12 +13,15 @@ function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  // NOTE: This is a client-side-only form. Submitting it does not send an
-  // email on its own, because GitHub Pages and other free static hosts do
-  // not run server-side code. To make this form actually deliver messages,
-  // connect it to a form-processing endpoint (for example, an endpoint
-  // provided by a third-party form service) or build a separate backend.
-  const handleSubmit = (event) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Set VITE_CONTACT_API_URL in a .env file (local) and as an environment
+  // variable in the GitHub Actions build (frontend repo secrets/variables),
+  // pointing to your deployed Render backend, e.g.:
+  // https://your-app-name.onrender.com/api/contact
+  const contactApiUrl = import.meta.env.VITE_CONTACT_API_URL
+
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
     const form = event.target
@@ -27,8 +30,33 @@ function Contact() {
       return
     }
 
-    setStatus('Message captured. Connect this form to a backend or form service to deliver it by email.')
-    setFormData(INITIAL_FORM)
+    if (!contactApiUrl) {
+      setStatus('Contact backend is not configured. Set VITE_CONTACT_API_URL.')
+      return
+    }
+
+    setIsSubmitting(true)
+    setStatus('Sending...')
+
+    try {
+      const response = await fetch(contactApiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Request failed')
+      }
+
+      setStatus('Message sent. Thanks for reaching out.')
+      setFormData(INITIAL_FORM)
+    } catch (err) {
+      console.error(err)
+      setStatus('Something went wrong sending your message. Please try again or email directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -93,7 +121,9 @@ function Contact() {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn btn-primary">Send message</button>
+          <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send message'}
+          </button>
           <p className="form-status" role="status" aria-live="polite">{status}</p>
         </form>
       </div>
