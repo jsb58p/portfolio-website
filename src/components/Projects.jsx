@@ -1,5 +1,4 @@
 import useReveal from '../hooks/useReveal.js'
-
 const PROJECTS = [
   {
     name: 'SchedulerAI',
@@ -16,7 +15,6 @@ const PROJECTS = [
     description:
       'Blockchain supply chain monitoring. Takes temperature/humidity data, records breaches on the blockchain, and makes all data accessible by pinning to an IPFS.',
     tags: ['Solidity', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Ethereum', 'Blockchain'],
-    liveUrl: '#',
     codeUrl: 'https://github.com/jsb58p/Blockchain--Supply-Chain-Temperature-Humidity',
   },
   {
@@ -25,7 +23,6 @@ const PROJECTS = [
     description:
       'A database for tracking car repair orders in an auto shop.',
     tags: ['PostGRE SQL', 'pgAdmin4'],
-    liveUrl: '#',
     codeUrl: 'https://github.com/jsb58p/Automative-Repair-Database',
   },
   {
@@ -34,7 +31,6 @@ const PROJECTS = [
     description:
       'Created a fitness function for a genetic algorithm. The purpose is to use AI to find the best fit for class schedules given a set of constraints (instructor availability, class size, etc.)',
     tags: ['Python', 'Pygame'],
-    liveUrl: '#',
     codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
   },
   {
@@ -43,14 +39,11 @@ const PROJECTS = [
     description:
       'A personal finance app with a focus on visualization through charts and graphs. Hosted on Google Cloud and GitHub pages.',
     tags: ['Java', 'JavaScript', 'TypeScript', 'mySQL', 'Google Cloud Services'],
-    liveUrl: '#',
     codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
   },
 ]
-
 function Projects() {
   const [ref, isVisible] = useReveal()
-
   return (
     <section
       id="projects"
@@ -77,7 +70,9 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="project-links">
-                  <a href={project.liveUrl} className="text-link">Live site</a>
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} className="text-link">Live site</a>
+                  )}
                   <a href={project.codeUrl} className="text-link">Source code</a>
                 </div>
               </div>
@@ -88,5 +83,4 @@ function Projects() {
     </section>
   )
 }
-
 export default Projects
