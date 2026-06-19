@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="site-footer">
-      <p>&copy; {new Date().getFullYear()} Full Name. Built with React and Vite.</p>
+      <p>&copy; {new Date().getFullYear()} Jacob Biddinger. Built with React and Vite.</p>
     </footer>
   )
 }
