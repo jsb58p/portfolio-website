@@ -41,6 +41,14 @@ const PROJECTS = [
     tags: ['Java', 'JavaScript', 'TypeScript', 'mySQL', 'Google Cloud Services'],
     codeUrl: 'https://github.com/NWise-DrownedOctopus/Genetic-Algorithm-Project',
   },
+  {
+    name: 'SOS Game',
+    image: './projects/project-6.png',
+    description:
+      'SOS game completed with CPU opponent and a replay feature.',
+    tags: ['Java', 'JavaFX'],
+    codeUrl: 'https://github.com/jsb58p/CS449---Software-Engineering-Project',
+  },
 ]
 function Projects() {
   const [ref, isVisible] = useReveal()
