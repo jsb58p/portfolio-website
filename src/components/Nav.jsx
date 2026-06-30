@@ -41,7 +41,7 @@ function Nav() {
           ))}
           <li>
             {/* Replace with a real résumé file placed in /public */}
-            <a href="/resume.pdf" className="nav-link nav-link-cta" download onClick={closeMenu}>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} className="nav-link nav-link-cta" download onClick={closeMenu}>
               Résumé
             </a>
           </li>
